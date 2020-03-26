@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: rgba(0, 132, 255, 0.918);
+    height: 5vh;
+    width: 100%;
+}
+header {
+    background-color: rgba(0, 119, 255, 0.37);
+    height: 10vh;
+    width: 100%;
+}
+.content {
+    background-color: rgb(252, 243, 209);
+    height: 30vh;
+    width: 100%;
+}
+.sign-up, .feature1, .feature2, .feature3 {
+    height: 20vh;
+    width: 100%;
+}
+.sign-up {
+    background-color: rgb(35, 123, 195);
+}
+.feature1 {
+    background-color: rgb(156, 115, 9);
+}
+.feature2 {
+    background-color: rgb(199, 82, 43) ;
+}
+.feature3 {
+    background-color: rgb(113, 72, 151);
+}
+header, .content, .sign-up, .feature1, .feature2, .feature3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------Tablet--------------------------- */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .sign-up, .feature1, .feature2, .feature3 {
+        width: 50%;
+    }
+
+    .sign-features {
+        display: flex;
+        flex-flow: row wrap;
+    }
+  }
+
+/* --------------- Non-Retina Screens ---------------------- */
+@media screen 
+    and (min-width: 1200px) 
+    and (max-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) { 
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .sign-features{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sign-features .sign-up {
+            width: 100%;
+            order: 4;
+        }
+        .sign-features .feature1 {
+            flex: 1;
+            order: 1;
+        }
+        .sign-features .feature2 {
+            flex: 1;
+            order: 3;
+        }
+        .sign-features .feature3 {
+            flex: 1;
+            order: 2;
+        }
+    }
